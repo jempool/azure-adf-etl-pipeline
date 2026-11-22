@@ -1,0 +1,30 @@
+{
+  "annotations": [],
+  "debugRunId": null,
+  "durationInMs": 271883,
+  "id": "/SUBSCRIPTIONS/<SUBSCRIPTION_ID>/RESOURCEGROUPS/RG-ADF-ETL-DEMO/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/ADF-ETL-OJGTU5TWNNRII/pipelineruns/4a052e14-e5fd-11f1-98b7-8c1d965d952a",
+  "invokedBy": {
+    "id": "4923b77ce018450893753a62623a1327",
+    "invokedByType": "Manual",
+    "name": "Manual",
+    "pipelineName": null,
+    "pipelineRunId": null
+  },
+  "isLatest": true,
+  "lastUpdated": "2026-11-21T22:50:19.180508+00:00",
+  "message": "",
+  "parameters": {},
+  "pipelineName": "pl_customers_etl",
+  "pipelineReturnValue": {},
+  "resourceGroup": "RG-ADF-ETL-DEMO",
+  "runDimension": {
+    "windowEndTime": null,
+    "windowStartTime": null
+  },
+  "runDimensions": null,
+  "runEnd": "2026-11-21T22:50:19.179926+00:00",
+  "runGroupId": "4a052e14-e5fd-11f1-98b7-8c1d965d952a",
+  "runId": "4a052e14-e5fd-11f1-98b7-8c1d965d952a",
+  "runStart": "2026-11-21T22:45:47.295935+00:00",
+  "status": "Succeeded"
+}
