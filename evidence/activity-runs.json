@@ -1,0 +1,396 @@
+{
+  "continuationToken": null,
+  "value": [
+    {
+      "activityName": "CopyRawCustomers",
+      "activityRunEnd": "2026-11-21T22:46:11.671668+00:00",
+      "activityRunId": "3b0b1ef4-d0af-464e-8382-6e289cfa662a",
+      "activityRunStart": "2026-11-21T22:45:54.860134+00:00",
+      "activityType": "Copy",
+      "durationInMs": 16811,
+      "error": {
+        "details": "",
+        "errorCode": "",
+        "failureType": "",
+        "message": "",
+        "target": "CopyRawCustomers"
+      },
+      "executionDetails": {
+        "integrationRuntime": [
+          {
+            "location": "East US",
+            "name": "AutoResolveIntegrationRuntime",
+            "nodes": null,
+            "type": "Managed"
+          }
+        ]
+      },
+      "id": "/SUBSCRIPTIONS/<SUBSCRIPTION_ID>/RESOURCEGROUPS/RG-ADF-ETL-DEMO/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/ADF-ETL-OJGTU5TWNNRII/pipelineruns/4a052e14-e5fd-11f1-98b7-8c1d965d952a/activityruns/3b0b1ef4-d0af-464e-8382-6e289cfa662a",
+      "input": {
+        "sink": {
+          "formatSettings": {
+            "fileExtension": ".csv",
+            "quoteAllText": true,
+            "type": "DelimitedTextWriteSettings"
+          },
+          "storeSettings": {
+            "type": "AzureBlobStorageWriteSettings"
+          },
+          "type": "DelimitedTextSink"
+        },
+        "source": {
+          "formatSettings": {
+            "type": "DelimitedTextReadSettings"
+          },
+          "storeSettings": {
+            "type": "AzureBlobStorageReadSettings"
+          },
+          "type": "DelimitedTextSource"
+        }
+      },
+      "integrationRuntimeNames": [
+        "autoresolveintegrationruntime"
+      ],
+      "iterationHash": "",
+      "linkedServiceName": "",
+      "output": {
+        "billingReference": {
+          "activityType": "DataMovement",
+          "billableDuration": [
+            {
+              "duration": 0.06666666666666667,
+              "meterType": "AzureIR",
+              "unit": "DIUHours"
+            }
+          ],
+          "totalBillableDuration": [
+            {
+              "duration": 0.06666666666666667,
+              "meterType": "AzureIR",
+              "unit": "DIUHours"
+            }
+          ]
+        },
+        "copyDuration": 13,
+        "dataConsistencyVerification": {
+          "VerificationResult": "NotVerified"
+        },
+        "dataRead": 160,
+        "dataWritten": 160,
+        "durationInQueue": {
+          "integrationRuntimeQueue": 0
+        },
+        "effectiveIntegrationRuntime": "AutoResolveIntegrationRuntime (East US)",
+        "errors": [],
+        "executionDetails": [
+          {
+            "detailedDurations": {
+              "queuingDuration": 8,
+              "transferDuration": 3
+            },
+            "duration": 13,
+            "profile": {
+              "queue": {
+                "duration": 8,
+                "status": "Completed"
+              },
+              "transfer": {
+                "details": {
+                  "listingSource": {
+                    "type": "AzureBlobStorage",
+                    "workingDuration": 0
+                  },
+                  "readingFromSource": {
+                    "type": "AzureBlobStorage",
+                    "workingDuration": 0
+                  },
+                  "writingToSink": {
+                    "type": "AzureBlobStorage",
+                    "workingDuration": 0
+                  }
+                },
+                "duration": 3,
+                "status": "Completed"
+              }
+            },
+            "sink": {
+              "region": "East US",
+              "type": "AzureBlobStorage"
+            },
+            "source": {
+              "region": "East US",
+              "type": "AzureBlobStorage"
+            },
+            "start": "2026-11-21T22:45:55.4273733Z",
+            "status": "Succeeded",
+            "usedDataIntegrationUnits": 4,
+            "usedParallelCopies": 1
+          }
+        ],
+        "filesRead": 1,
+        "filesWritten": 1,
+        "sinkPeakConnections": 1,
+        "sourcePeakConnections": 1,
+        "throughput": 0.053,
+        "usedDataIntegrationUnits": 4,
+        "usedParallelCopies": 1
+      },
+      "pipelineName": "pl_customers_etl",
+      "pipelineRunId": "4a052e14-e5fd-11f1-98b7-8c1d965d952a",
+      "recoveryStatus": "None",
+      "resourceGroup": "RG-ADF-ETL-DEMO",
+      "retryAttempt": null,
+      "status": "Succeeded",
+      "userProperties": {}
+    },
+    {
+      "activityName": "FilterCustomersOver28",
+      "activityRunEnd": "2026-11-21T22:50:18.056983+00:00",
+      "activityRunId": "c117e5f5-ae41-48a7-b89f-2e1698f67fcd",
+      "activityRunStart": "2026-11-21T22:46:12.846017+00:00",
+      "activityType": "ExecuteDataFlow",
+      "durationInMs": 245210,
+      "error": {
+        "details": "",
+        "errorCode": "",
+        "failureType": "",
+        "message": "",
+        "target": "FilterCustomersOver28"
+      },
+      "executionDetails": {
+        "integrationRuntime": [
+          {
+            "computeType": "General",
+            "coreCount": "8",
+            "name": "General-8-1-2924e10d-dad4-45b2-9b08-df5cc2a4f094",
+            "type": "Managed"
+          }
+        ]
+      },
+      "id": "/SUBSCRIPTIONS/<SUBSCRIPTION_ID>/RESOURCEGROUPS/RG-ADF-ETL-DEMO/PROVIDERS/MICROSOFT.DATAFACTORY/FACTORIES/ADF-ETL-OJGTU5TWNNRII/pipelineruns/4a052e14-e5fd-11f1-98b7-8c1d965d952a/activityruns/c117e5f5-ae41-48a7-b89f-2e1698f67fcd",
+      "input": {
+        "compute": {
+          "computeType": "General",
+          "coreCount": 8
+        },
+        "dataFlow": {
+          "referenceName": "df_filter_customers_over_28",
+          "type": "DataFlowReference"
+        },
+        "dataFlowETag": "49008074-0000-0100-0000-6b021eed0000",
+        "traceLevel": "Fine"
+      },
+      "integrationRuntimeNames": [
+        "autoresolveintegrationruntime"
+      ],
+      "iterationHash": "",
+      "linkedServiceName": "",
+      "output": {
+        "billingReference": {
+          "activityType": "executedataflow",
+          "billableDuration": [
+            {
+              "duration": 0.5100276664444444,
+              "meterType": "Data Flow",
+              "sessionType": "JobCluster",
+              "unit": "coreHour"
+            }
+          ]
+        },
+        "effectiveIntegrationRuntime": "AutoResolveIntegrationRuntime (East US)",
+        "reportLineageToPurview": {
+          "status": "NotReported"
+        },
+        "runStatus": {
+          "clusterComputeId": "c117e5f5-ae41-48a7-b89f-2e1698f67fcd",
+          "computeAcquisitionDuration": 182799,
+          "dsl": "\nsource() ~> RawCustomers\n\nRawCustomers filter() ~> FilterOver28\n\nFilterOver28 sink() ~> CuratedCustomers",
+          "idleTimeBeforeCurrentJob": 0,
+          "integrationRuntimeName": "General-8-1-2924e10d-dad4-45b2-9b08-df5cc2a4f094",
+          "metrics": {
+            "CuratedCustomers": {
+              "details": {
+                "mergeDuration": [
+                  120
+                ],
+                "postCommandsDuration": [
+                  1
+                ],
+                "preCommandsDuration": [
+                  47
+                ]
+              },
+              "format": "delimited",
+              "progressState": "Completed",
+              "rowsWritten": 4,
+              "sinkPostProcessingTime": 0,
+              "sinkProcessingTime": 5997,
+              "sources": {
+                "RawCustomers": {
+                  "details": {
+                    "fileLoadDuration": [
+                      28236
+                    ],
+                    "fileReadCount": [
+                      1
+                    ],
+                    "fileSystemInitDuration": [
+                      29126
+                    ],
+                    "pathResolutionDuration": [
+                      775
+                    ]
+                  },
+                  "format": "delimited",
+                  "rowsRead": 8,
+                  "store": "adlsgen2"
+                }
+              },
+              "stages": [
+                {
+                  "bytesRead": 160,
+                  "bytesWritten": 94,
+                  "lastUpdateTime": "2026-11-21 22:50:11.996",
+                  "partitionStatus": "Success",
+                  "partitionTimes": [
+                    1141
+                  ],
+                  "progressState": "Completed",
+                  "recordsRead": 8,
+                  "recordsWritten": 4,
+                  "stage": 1,
+                  "streams": {
+                    "CuratedCustomers": {
+                      "cached": false,
+                      "count": 4,
+                      "partitionCounts": [
+                        4
+                      ],
+                      "partitionStatus": "Success",
+                      "totalPartitions": 1,
+                      "type": "sink"
+                    },
+                    "FilterOver28": {
+                      "cached": false,
+                      "count": 4,
+                      "partitionCounts": [
+                        4
+                      ],
+                      "partitionStatus": "Success",
+                      "totalPartitions": 1,
+                      "type": "filter"
+                    },
+                    "RawCustomers": {
+                      "cached": false,
+                      "count": 8,
+                      "partitionCounts": [
+                        8
+                      ],
+                      "partitionStatus": "Success",
+                      "totalPartitions": 1,
+                      "type": "source"
+                    }
+                  },
+                  "target": "CuratedCustomers",
+                  "time": 1743
+                }
+              ],
+              "store": "adlsgen2"
+            }
+          },
+          "profile": {
+            "CuratedCustomers": {
+              "computed": [
+                {
+                  "columns": [
+                    "age"
+                  ],
+                  "source": "RawCustomers"
+                }
+              ],
+              "drifted": 0,
+              "dropped": 0,
+              "lineage": {
+                "age": {
+                  "from": [
+                    {
+                      "columns": [
+                        "age"
+                      ],
+                      "source": "RawCustomers"
+                    }
+                  ],
+                  "mapped": true
+                },
+                "city": {
+                  "from": [
+                    {
+                      "columns": [
+                        "city"
+                      ],
+                      "source": "RawCustomers"
+                    }
+                  ],
+                  "mapped": true
+                },
+                "id": {
+                  "from": [
+                    {
+                      "columns": [
+                        "id"
+                      ],
+                      "source": "RawCustomers"
+                    }
+                  ],
+                  "mapped": true
+                },
+                "name": {
+                  "from": [
+                    {
+                      "columns": [
+                        "name"
+                      ],
+                      "source": "RawCustomers"
+                    }
+                  ],
+                  "mapped": true
+                }
+              },
+              "newer": 0,
+              "total": 4,
+              "updated": 4
+            },
+            "FilterOver28": {
+              "computed": [],
+              "drifted": 0,
+              "dropped": 0,
+              "lineage": {},
+              "newer": 0,
+              "total": 4,
+              "updated": 0
+            },
+            "RawCustomers": {
+              "computed": [],
+              "drifted": 0,
+              "dropped": 0,
+              "lineage": {},
+              "newer": 4,
+              "total": 4,
+              "updated": 0
+            }
+          },
+          "sparkRunId": "1",
+          "sparkVersion": "3.5",
+          "version": "20261029.2"
+        }
+      },
+      "pipelineName": "pl_customers_etl",
+      "pipelineRunId": "4a052e14-e5fd-11f1-98b7-8c1d965d952a",
+      "recoveryStatus": "None",
+      "resourceGroup": "RG-ADF-ETL-DEMO",
+      "retryAttempt": null,
+      "status": "Succeeded",
+      "userProperties": {}
+    }
+  ]
+}

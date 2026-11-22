@@ -1,0 +1,3 @@
+curated
+curated/customers_over_28.csv
+raw/customers.csv
